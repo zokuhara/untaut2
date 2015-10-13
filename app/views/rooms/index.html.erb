@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="list col-md-3">
+    <div class="room-list">
+      <%= link_to "Create Room", new_room_path %>
+    </div>
+    <% @rooms.each do |room| %>
+      <div class="room-list">
+        <%= link_to room.room_name, room_path(id: room.id) %>
+      </div>
+    <% end %>
+  </div>
+  <div class="welcome col-md-offset-3">
+    <h1>Welcome to Untaut</h1>
+    <p>
+      Where we toe the line of blatent copyright infringement
+    </p>
+    <p>
+      Choose an existing room from the left, or create your own
+    </p>
+  </div>
+</div>

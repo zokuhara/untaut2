@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="list col-md-3">
+    <div class="room-list">
+      <%= link_to "Home", root_path %>
+    </div>
+
+    <% @rooms.each do |room| %>
+      <div class="room-list">
+        <%= link_to room.room_name, room_path(id: room.id) %>
+      </div>
+    <% end %>
+  </div>
+
+
+  <div class="chat col-md-9">
+    <h1>Welcome to <%= @room.room_name %></h1>
+    <%= react_component 'Room', {room: @room} %>
+  </div>
+</div>

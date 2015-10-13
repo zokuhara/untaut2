@@ -1,0 +1,10 @@
+<div class="col-md-6 col-md-offset-3">
+  <h1>New Room</h1>
+  <%= simple_form_for @room do |f| %>
+    <%= f.input :room_name, label: "Room Name" %>
+    <%= f.submit "Create Room", class: "btn btn-lg btn-success btn-block" %>
+
+
+  <% end %>
+
+</div>
